@@ -1,0 +1,149 @@
+* {
+    margin:0; 
+    padding: 0;
+    /* 브라우저에서 제공하는 기본적인 margin,padding이 있는데 0px하여 제거 */
+
+}
+
+body{
+    background-color: #111;
+}
+
+.navbar {
+    background-color: #111;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* align-items: center는 수직을 맞추는 것 */
+    flex-wrap: wrap;
+    /* 기본값은 nowrap임. npwrap 상태에서는 브라우저 창이 작아지면 찌부가 되는데 wrap이면, 아래로 내려오게 됨  */
+
+}
+
+.logo{
+    height: 45px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo_img {
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar li a{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar li a:hover {
+    color: gray;
+}
+
+/* banner */
+
+.banner {
+    background-image: url('./main-img/banner.jpg');
+    background-size: cover;
+    /* contain: 본래 사이즈로 화면 꽉채우게 하는데 no-repeat 설정해주면 반복은 없게설정 */
+    /* cover: 이미지를 늘려서 꽉채우는 것 */
+    /* n%: 원래 이미지의 n%만큼의 사이즈로 채우는 것 -> 사이즈 픽셀로 지정 가능 ex) 0px 8px */
+    background-position: center;
+    height: 448px;
+    color: white;
+}
+
+.banner_contents{
+    margin-left: 30px;
+    padding-top: 190px;
+    height: 190px;
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+
+}
+
+.banner_btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.banner_btn button {
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+.banner_btn button:hover {
+    background-color: rgb(171, 163, 163);
+    cursor: pointer;
+}
+
+.banner_description {
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* row */
+
+.row{
+    color: #fff;
+}
+
+.row h2 {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.row_poster {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transfrom 450ms;
+    /* transfrom= 커지고 작아지고 hover해서 변경이 될 때 450ms이 걸리게 지속시간을 추가 */
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+
+.row_poster:hover {
+    transform: scale(1.1);
+    /* 더 크게 만드는 것 = scale() -> 1.1이면 10% 크게 만드는 것 */
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+/* 스크롤바 안 보이게 만들기  */
+
+.row_posterLarge {
+    max-height: 250px;
+}
