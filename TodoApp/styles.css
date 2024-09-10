@@ -2,6 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: lightcoral;
+    color: #fff;
+    margin: 20px 10px 0px 10px
 }
 
 button {
@@ -11,10 +19,6 @@ button {
     cursor: pointer;
 }
 
-body {
-    background-color: lightcoral;
-    color: #fff;
-}
 
 main {
     min-height: 100vh;
@@ -82,10 +86,18 @@ main {
 .item.complete input[type='text'] {
     text-decoration: line-through;
 }
+ 
+.item.complete {
+    opacity: 0.7;
+}
 
 .item:hover,
 .item:focus-within {
-    outline: 2px solid #fff;
+    outline: solid #fff 2px;
+}
+
+.item input[type='text']:focus {
+    border-bottom: 2px solid #fff;
 }
 
 .actions button {
